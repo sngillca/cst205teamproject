@@ -1,4 +1,3 @@
-#test GUI
 
 import sys, string
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QLineEdit, QHBoxLayout, QVBoxLayout, QComboBox
@@ -9,6 +8,7 @@ from random import*
 import flickrapi
 import urllib
 
+#test runs
 
 filters = {"random","sad","angry","happy","love","school","work","finals","life"}
 category = ["dog","cat","pizza","bird","christmas","car","school","egg"]
@@ -28,7 +28,7 @@ class Window(QWidget):
         
         self.textLin = QLineEdit()
         self.dropDown = QComboBox()
-        self.searchButton = QPushButton("Search",self)
+        self.searchButton = QPushButton("Generate Meme",self)
         self.dropDown.addItems(filters)
         layout = QHBoxLayout()
         layout.addWidget(self.label1)
@@ -78,7 +78,7 @@ class Window(QWidget):
             image = Image.open('none.jpg')
             image = image.resize((1000,1000), Image.ANTIALIAS)
             image.save('yourMeme.jpg')
-            image.show()
+            #image.show()
         else:
             #print("WE GOOD")
             print(urls[num])
@@ -86,29 +86,36 @@ class Window(QWidget):
             image = Image.open('yourMeme.jpg') 
             image = image.resize((600, 600), Image.ANTIALIAS)
             image.save('yourMeme.jpg')
-            image.show()
+            #image.show()
         
 
-        if self.dropDown.currentText() == "happy":
+        if self.dropDown.currentText() == "angry":
             line1 = ["Seasme street didn't prepare me\n for any of this shit"]
             line2 = ["Fuck you Big Bird"]
-        else:
-            line1 = ["End meh"]
-            line2 = ["plz"]
+        if self.dropDown.currentText() == "work":
+            line1 = ["Whoever stole my stapler"]
+            line2 = ["I will find you, and I will kill you"]
+        if self.dropDown.currentText() == "love":
+            line1 = ["When you finally tell him\her \n how you feel"]
+            line2 = ["And he\she leaves you on read"]
 
-
-
-
+        if self.dropDown.currentText() == "happy":
+            line1 = ["When you're finally feeling\n content with your life"]
+            line2 = ["but then you remember your anxiety,\n depression,  and overall quality of \n life"]
+        if self.dropDown.currentText() == "finals":
+            line1 = ["Strippers making $100K\n a year"]
+            line2= ["& here I am struggling cuz I got\n morals. Where the pole at?"]
         
 
         image = Image.open("yourMeme.jpg")
         draw = ImageDraw.Draw(image)
-        font = ImageFont.truetype('arial.ttf', size=30)
+        font = ImageFont.truetype('arial.ttf', size=35)
 
         #starting position of the image
         (x, y) = (10, 70)
         message = line1[0]
-        color = 'rgb(255,255,255)' #black color
+
+        color = 'rgb(255,255,255)' 
 
         #draw the message on the background
 
