@@ -10,7 +10,7 @@ import urllib
 
 #test runs
 
-filters = {"random","sad","angry","happy","love","school","work","finals","life"}
+filters = {"angry","happy","love","work","finals"}
 category = ["dog","cat","pizza","bird","christmas","car","school","egg"]
 def searchCategory(name):
     for i in range(0, len(category), 1):
@@ -49,6 +49,7 @@ class Window(QWidget):
 
     @pyqtSlot()
     def update_ui(self):
+        count = 0
         memeType = self.textLin.text()
         
         flickr=flickrapi.FlickrAPI('98c9e8d1dbaeae46f08c5cccac21c21e', 'aea1eced4673a3f8', cache=True)
