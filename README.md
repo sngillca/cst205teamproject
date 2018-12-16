@@ -24,4 +24,14 @@ to a dog, choose a filter for meme lines -such as "love",
 "finals", "work", just to name a few. Or the user can 
 input their own lines.
 
+Natalia worked mostly on using the Flickr API, as well as figuring
+out the GUI and calibrating it; this took hours of research and
+turned out to present itself as a bit probematic however doable.
+
+Christopher worked mostly on the user entering their own lines
+which also took a while to figure out how to set up with the GUI.
+
+Overall this project took many hours of research; and I am happy
+with the end result.
+
 '''
