@@ -1,0 +1,12 @@
+import sys, string
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QLineEdit, QHBoxLayout, QVBoxLayout, QComboBox
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui import QPixmap
+from PIL import Image, ImageQt, ImageDraw, ImageFont,  ImageQt
+from random import*
+import flickrapi
+import urllib
+
+'''
+don't forget to pip install flickrapi
+'''
