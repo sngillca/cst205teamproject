@@ -124,7 +124,7 @@ class Window(QWidget):
             print(urls[num])
             urllib.request.urlretrieve(urls[num], 'yourMeme.jpg')
             image = Image.open('yourMeme.jpg') 
-            image = image.resize((600, 600), Image.ANTIALIAS)
+            image = image.resize((700, 700), Image.ANTIALIAS)
             image.save('yourMeme.jpg')
             #image.show()
 
